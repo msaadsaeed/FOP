@@ -23,9 +23,11 @@ Cross-modal matching results: (Left) FOP vs other losses used in F-V methods. (R
  </p>
 
 ## Citing FOP
-@article{sasnet,
+```BibTeX
+@article{fop_fusion,
   title={FUSION AND ORTHOGONAL PROJECTION FOR IMPROVED FACE-VOICE ASSOCIATION},
   author={Muhammad Saad Saeed and Muhammad Haris Khan and Shah Nawaz and Muhammad Haroon Yousaf and Alessio Del Bue},
-  journal={Internation Conference on Acoustics, Speech, and Signal Processing (ICASSP-22)},
+  journal={International Conference on Acoustics, Speech, and Signal Processing (ICASSP-22)},
   year={2022}
 }
+```
