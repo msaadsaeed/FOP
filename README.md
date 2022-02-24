@@ -16,7 +16,7 @@ propose fusion and orthogonal projection (FOP) mechanism (dotted red box). (Righ
 ## Requirements
 
 ## Comparison
-Cross-modal matching results: (Left) FOP vs other losses used in F-V methods. (Right) Our method vs SOTA methods.
+Cross-modal matching results: (Left) FOP vs other losses used in V-F methods. (Right) Our method vs SOTA methods.
 <p align="center"> 
   <img src="imgs/nway_loss.jpg" width="30%"/>
   <img src="imgs/nway_sota.jpg" width="30%"/>
