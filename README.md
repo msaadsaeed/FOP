@@ -3,10 +3,15 @@ Official implementation of FOP method as described in "Fusion and Orthogonal Pro
 ![image](https://user-images.githubusercontent.com/57453957/155537286-5efb2f3c-878c-47d5-a4a5-cec5421a8219.png)
 
 ## Proposed Methodology
-
+(Left) Overall method. Fundamentally, it is a two-stream pipeline which generates face and voice embeddings. We
+propose fusion and orthogonal projection (FOP) mechanism (dotted red box). (Right) The architecture of multimodal fusion.
+<p align="center"><img src="imgs/proposed_fop.jpg" width="50%"/>
+<p align="center"><img src="imgs/gmf.jpg" width="50%"/>
 ## Requirements
 
 ## Comparison
+![nway_new](https://user-images.githubusercontent.com/57453957/155538706-39c001ea-3b35-4868-bff5-57c60fc706cb.jpg)
+![nway_sota_new](https://user-images.githubusercontent.com/57453957/155538714-304af301-d8b1-43c9-9367-2297af168cb2.jpg)
 
 ## Citing FOP
 @article{sasnet,
