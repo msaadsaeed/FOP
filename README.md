@@ -1,7 +1,7 @@
 # FOP (ICASSP 2022)
 Official implementation of FOP method as described in "Fusion and Orthogonal Projection for Improved Face-Voice Association"
 <p align="center">
-  <img src=""
+  <img src="title.PNG" width="30%"/>
 </p>
 
 ## Proposed Methodology
