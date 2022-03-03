@@ -26,7 +26,10 @@ conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=10
 ## Feature Extraction
 
 ## Training and Testing
-
+### Facial Feature Extraction
+For Face Feature Extraction we used the method described in [1]. We used the code from this repository.
+### Voice Feature Extraction
+For Voice Feature Extraction we used the method described in [2]. The code from original authors is publicly available at 
 ## Comparison
 Cross-modal matching results: (Left) FOP vs other losses used in V-F methods. (Right) Our method vs SOTA methods.
 <p align="center"> 
