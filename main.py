@@ -139,8 +139,8 @@ def main(face_train, voice_train, train_label):
     
     for alpha in FLAGS.alpha_list:
         
-        save_dir = '%s_%s_alpha_%f'%(FLAGS.fusion, FLAGS.save_dir, alpha)
-        txt = 'output/%s_ce_opl_%03d_%0.3f.txt'%(FLAGS.fusion, FLAGS.max_num_epoch, alpha)
+        save_dir = '%s_%s_alpha_%0.2f'%(FLAGS.fusion, FLAGS.save_dir, alpha)
+        txt = 'output/%s_ce_opl_%03d_%0.2f.txt'%(FLAGS.fusion, FLAGS.max_num_epoch, alpha)
         
         with open(txt,'w+') as f:
             f.write('EPOCH\tLOSS\tEER\tAUC\n')
@@ -167,7 +167,7 @@ def main(face_train, voice_train, train_label):
                 save_checkpoint({
                     'epoch': epoch,
                     'state_dict': model.state_dict()}, save_dir, 'checkpoint_%04d.pth.tar'%(epoch))
-                print('==> Epoch: %d/%d Loss: %0.3f Alpha:%0.2f'%(epoch, FLAGS.max_num_epoch, loss_per_epoch, alpha))
+                print('==> Epoch: %d/%d Loss: %0.2f Alpha:%0.2f'%(epoch, FLAGS.max_num_epoch, loss_per_epoch, alpha))
                 
                 if epoch%FLAGS.test_epoch == 0:
                 
@@ -182,26 +182,23 @@ def main(face_train, voice_train, train_label):
                         'state_dict': model.state_dict()}, save_best, 'checkpoint_%04d.pth.tar'%(epoch))
                     
                     epoch += 1
-                    f.write('%04d\t%0.4f\t%0.4f\t%0.4f\n'%(epoch, loss_per_epoch, eer, auc))
+                    f.write('%04d\t%0.4f\t%0.2f\t%0.2f\n'%(epoch, loss_per_epoch, eer, auc))
                     loss_per_epoch = 0
-                
-        min_eer = 0
-        max_auc= 0
         
         plt.figure(1)
         plt.title('Total Loss_%f'%(alpha))
         plt.plot(loss_plot)
-        plt.savefig('output/%s_%f_total_loss.jpg'%(FLAGS.fusion, alpha), dpi=800)
+        plt.savefig('output/%s_%0.2f_total_loss.jpg'%(FLAGS.fusion, alpha), dpi=800)
         
         plt.figure(2)
         plt.title('EER_%f'%(alpha))
         plt.plot(eer_list)
-        plt.savefig('output/%s_%f_eer.jpg'%(FLAGS.fusion, alpha), dpi=800)
+        plt.savefig('output/%s_%0.2f_eer.jpg'%(FLAGS.fusion, alpha), dpi=800)
         
         plt.figure(3)
         plt.title('AUC_%f'%(alpha))
         plt.plot(auc_list)
-        plt.savefig('output/%s_%f_auc.jpg'%(FLAGS.fusion, alpha), dpi=800)
+        plt.savefig('output/%s_%0.2f_auc.jpg'%(FLAGS.fusion, alpha), dpi=800)
                 
         return loss_plot, min_eer, max_auc
     
