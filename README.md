@@ -44,11 +44,11 @@ python main.py --cuda 1 --save_dir ./model --lr 1e-5 --batch_size 128 --max_num_
 ### Testing
 - Linear Fusion:
 ```
-python test.py --cuda 1 --ckpt <path to checkpoint.pth.tar> --dim_embed 128 --fusion linear
+python test.py --cuda 1 --ckpt <path to checkpoint.pth.tar> --dim_embed 128 --fusion linear --alpha 1
 ```
 - Gated Fusion:
 ```
-python test.py --cuda 1 --ckpt <path to checkpoint.pth.tar> --dim_embed 128 --fusion gated
+python test.py --cuda 1 --ckpt <path to checkpoint.pth.tar> --dim_embed 128 --fusion gated --alpha 1
 ```
 ## Comparison
 Cross-modal matching results: (Left) FOP vs other losses used in V-F methods. (Right) Our method vs SOTA methods.
