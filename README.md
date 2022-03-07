@@ -25,11 +25,15 @@ conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=10
 ```
 ## Feature Extraction
 
-## Training and Testing
 ### Facial Feature Extraction
-For Face Embeddings we use [[VGGFace](http://www.bmva.org/bmvc/2015/papers/paper041/index.html)]. We use the Keras implementation of this paper from [[this repository](https://gist.github.com/EncodeTS/6bbe8cb8bebad7a672f0d872561782d9)]
+For Face Embeddings we use [[VGGFace](http://www.bmva.org/bmvc/2015/papers/paper041/index.html)]. We use the Keras implementation of this paper from this[[repository](https://gist.github.com/EncodeTS/6bbe8cb8bebad7a672f0d872561782d9)]
 ### Voice Feature Extraction
 For Voice Embeddings we use the method described in [[Utterance Level Aggregator](https://arxiv.org/abs/1902.10107)]. The code we used is released by authors and is publicly available at this [[repository](https://github.com/WeidiXie/VGG-Speaker-Recognition)]![GitHub stars](https://img.shields.io/github/stars/WeidiXie/VGG-Speaker-Recognition.svg?logo=github&label=Stars)
+
+Once you have extracted the features, write them to a .csv file in features directory.
+
+## Training and Testing
+
 ## Comparison
 Cross-modal matching results: (Left) FOP vs other losses used in V-F methods. (Right) Our method vs SOTA methods.
 <p align="center"> 
