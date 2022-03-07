@@ -28,7 +28,7 @@ We have used VoxCeleb1 for the experimentation in this work. The dataset and tra
 ### Facial Feature Extraction
 For Face Embeddings we use [[VGGFace](http://www.bmva.org/bmvc/2015/papers/paper041/index.html)]. We use the Keras implementation of this paper from this[[repository](https://gist.github.com/EncodeTS/6bbe8cb8bebad7a672f0d872561782d9)]
 ### Voice Feature Extraction
-For Voice Embeddings we use the method described in [[Utterance Level Aggregator](https://arxiv.org/abs/1902.10107)]. The code we used is released by authors and is publicly available at this [[repository](https://github.com/WeidiXie/VGG-Speaker-Recognition)]![GitHub stars](https://img.shields.io/github/stars/WeidiXie/VGG-Speaker-Recognition.svg?logo=github&label=Stars)
+For Voice Embeddings we use the method described in [[Utterance Level Aggregator](https://arxiv.org/abs/1902.10107)]. The code we used is released by authors and is publicly available [[here](https://github.com/WeidiXie/VGG-Speaker-Recognition)]![GitHub stars](https://img.shields.io/github/stars/WeidiXie/VGG-Speaker-Recognition.svg?logo=github&label=Stars)
 
 Once the features are extracted, write them to a .csv file in features directory. The csv files of train and test splits (random_unseen_unheard) can be downloaded [[here](https://drive.google.com/drive/folders/1vplsrEIlufVG2n86C7uBdtfRVW6P-o-Z?usp=sharing)]
 ## Training and Testing
