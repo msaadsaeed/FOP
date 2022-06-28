@@ -293,7 +293,6 @@ if __name__ == '__main__':
     parser.add_argument('--dim_embed', type=int, default=128,
                         help='Embedding Size')
     parser.add_argument('--fusion', type=str, default='gated', help='Fusion Type')
-    parser.add_argument('--test_epoch', type=int, default=5, help='Test every nth epoch')
     
     global FLAGS
     FLAGS, unparsed = parser.parse_known_args()
