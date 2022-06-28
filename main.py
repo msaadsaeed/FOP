@@ -169,21 +169,19 @@ def main(face_train, voice_train, train_label):
                     'state_dict': model.state_dict()}, save_dir, 'checkpoint_%04d.pth.tar'%(epoch))
                 print('==> Epoch: %d/%d Loss: %0.2f Alpha:%0.2f'%(epoch, FLAGS.max_num_epoch, loss_per_epoch, alpha))
                 
-                if epoch%FLAGS.test_epoch == 0:
-                
-                    eer, auc = online_evaluation.test(FLAGS, model, face_test, voice_test)
-                    eer_list.append(eer)
-                    auc_list.append(auc)
-                    if eer <= min(eer_list) or auc >= max(auc_list):
-                        min_eer = eer
-                        max_auc = auc
-                        save_checkpoint({
-                        'epoch': epoch,
-                        'state_dict': model.state_dict()}, save_best, 'checkpoint_%04d.pth.tar'%(epoch))
-                    
-                    epoch += 1
-                    f.write('%04d\t%0.4f\t%0.2f\t%0.2f\n'%(epoch, loss_per_epoch, eer, auc))
-                    loss_per_epoch = 0
+                eer, auc = online_evaluation.test(FLAGS, model, face_test, voice_test)
+                eer_list.append(eer)
+                auc_list.append(auc)
+                if eer <= min(eer_list) or auc >= max(auc_list):
+                    min_eer = eer
+                    max_auc = auc
+                    save_checkpoint({
+                    'epoch': epoch,
+                    'state_dict': model.state_dict()}, save_best, 'checkpoint_%04d.pth.tar'%(epoch))
+
+                epoch += 1
+                f.write('%04d\t%0.4f\t%0.2f\t%0.2f\n'%(epoch, loss_per_epoch, eer, auc))
+                loss_per_epoch = 0
         
         plt.figure(1)
         plt.title('Total Loss_%f'%(alpha))
