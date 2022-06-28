@@ -172,8 +172,8 @@ def evaluate(embeddings, actual_issame, nrof_folds=10):
     return tpr, fpr, accuracy, val, val_std, far
 
 def test(face_test, voice_test):
-
-    model = FOP(FLAGS, face_test.shape[1], voice_test.shape[1])
+    n_class = 64
+    model = FOP(FLAGS, face_test.shape[1], voice_test.shape[1], n_class)
     checkpoint = torch.load(FLAGS.ckpt)
     model.load_state_dict(checkpoint['state_dict'])
     print("=> loaded checkpoint '{}' (epoch {})"
