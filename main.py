@@ -130,15 +130,13 @@ def main(face_train, voice_train, train_label):
     n_parameters = sum([p.data.nelement() for p in model.parameters()])
     print('  + Number of params: {}'.format(n_parameters))
     
-    eer_list = []
-    epoch=1
-    num_of_batches = (len(train_label) // FLAGS.batch_size)
-    loss_plot = []
-    auc_list = []
-    loss_per_epoch = 0
-    
     for alpha in FLAGS.alpha_list:
-        
+        eer_list = []
+        epoch=1
+        num_of_batches = (len(train_label) // FLAGS.batch_size)
+        loss_plot = []
+        auc_list = []
+        loss_per_epoch = 0
         save_dir = '%s_%s_alpha_%0.2f'%(FLAGS.fusion, FLAGS.save_dir, alpha)
         txt = 'output/%s_ce_opl_%03d_%0.2f.txt'%(FLAGS.fusion, FLAGS.max_num_epoch, alpha)
         
