@@ -170,7 +170,7 @@ def main(face_train, voice_train, train_label):
                 eer, auc = online_evaluation.test(FLAGS, model, face_test, voice_test)
                 eer_list.append(eer)
                 auc_list.append(auc)
-                if eer <= min(eer_list) or auc >= max(auc_list):
+                if eer <= min(eer_list):
                     min_eer = eer
                     max_auc = auc
                     save_checkpoint({
