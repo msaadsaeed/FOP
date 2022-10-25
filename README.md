@@ -76,4 +76,10 @@ Cross-modal matching results: (Left) FOP vs other losses used in V-F methods. (R
   year={2022},
   organization={IEEE}
 }
+@article{saeed2022learning,
+  title={Learning Branched Fusion and Orthogonal Projection for Face-Voice Association},
+  author={Saeed, Muhammad Saad and Nawaz, Shah and Khan, Muhammad Haris and Javed, Sajid and Yousaf, Muhammad Haroon and Del Bue, Alessio},
+  journal={arXiv preprint arXiv:2208.10238},
+  year={2022}
+}
 ```
