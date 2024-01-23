@@ -225,7 +225,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--seed', type=int, default=1, help='random seed')
     parser.add_argument('--cuda', action='store_true', default=False, help='CUDA training')
-    parser.add_argument('--ckpt', type=str, default='D:/research/UETGen/icassp2022/codes_to_release/fop/linear_model_alpha_1.000000/checkpoint.pth.tar', help='Checkpoints directory.')
+    parser.add_argument('--ckpt', type=str, default='checkpoint.pth.tar', help='Checkpoints directory.')
     parser.add_argument('--dim_embed', type=int, default=128,
                         help='Embedding Size')
     parser.add_argument('--fusion', type=str, default='linear', help='Fusion Type')
